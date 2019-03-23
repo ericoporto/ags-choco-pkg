@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
+<!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://chocolatey.org/packages). -->
+
+<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
+
+<!--
+This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
+
+* the package xmlns schema url may cause issues with nuget.exe
+* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces 
+* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements 
+-->
+
+<!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
+<!-- * If you are an organization making private packages, you probably have no issues here -->
+<!-- * If you are releasing to the community feed, you need to consider distribution rights. -->
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <!-- This section is about this package, although id and version have ties back to the software -->
+    <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
+    <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
+    <id>ags</id>
+    <!-- version should MATCH as closely as possible with the underlying software -->
+    <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
+    <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
+    <version>3.4.3.1</version>
+    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <packageSourceUrl>https://github.com/adventuregamestudio/ags</packageSourceUrl>
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <owners>ericoporto</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>Adventure Game Studio</title>
+    <authors>Chris Jones et al</authors>
+    <!-- projectUrl is required for the community feed -->
+    <projectUrl>https://www.adventuregamestudio.co.uk</projectUrl>
+    <projectSourceUrl>https://github.com/adventuregamestudio/ags</projectSourceUrl>
+    <iconUrl>https://avatars3.githubusercontent.com/u/1833326?s=200&amp;v=4</iconUrl>
+    <copyright>2019 Chris Jones et al</copyright>
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <licenseUrl>https://raw.githubusercontent.com/adventuregamestudio/ags/master/License.txt</licenseUrl>
+    <!--<requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://adventuregamestudio.github.io/ags-manual/</docsUrl>
+    <mailingListUrl>https://www.adventuregamestudio.co.uk/forums/index.php</mailingListUrl>
+    <bugTrackerUrl>https://github.com/adventuregamestudio/ags/issues</bugTrackerUrl>
+    <tags>ags AdventureGameStudio</tags>
+    <summary>Adventure Game Studio is a Game Developing IDE.</summary>
+    <description>
+      Adventure Game Studio is Free and Open Source. 
+      AGS provides everything you need from within one easy-to-use application. 
+      Create, test and debug your game, all in one place.
+    </description>
+    <releaseNotes>
+    AGS 3.4.3 is mainly a bug-fixing release, it contains fixes both critical and minor accumulated for the last year. Some of them were part of 3.5.0 development, but since former was taking too long I decided to create an update to 3.4.* branch.
+    Version number "3.4.2" is skipped because it was used during early development of 3.5.0.
+
+    Since this release AGS distribution no longer includes "no-MP3" engine variant and "Demo Game" project source.
+    1. MP3's patent has expired, which means you no longer should have issues if releasing a commercial game with mp3 audio:
+    Quote
+    The basic MP3 decoding and encoding technology is patent-free in the European Union, all patents having expired there by 2012 at the latest. In the United States, the technology became substantially patent-free on 16 April 2017. MP3 patents expired in the US between 2007 and 2017.
+    (https://en.wikipedia.org/wiki/MP3#Licensing,_ownership_and_legislation)
+    2. "Demo Quest" game is an ancient project which has not been updated for many years. It does not look that good either. I recommend searching for contemporary open-sourced AGS games instead, for now.
+
+
+    Changes in the Patch 1:
+
+    Engine:
+     - Fixed serious mistake that would cause crashes in plugins which export their own managed types for game script.
+
+    Linux:
+     - Fixed compilation against recent Allegro 4.4.3 release.
+     - Updated prebuilt binaries to be compatible with Debian 8 (jessie) and higher.
+
+
+    What is new in 3.4.3
+
+    Common features:
+     - Removed restriction preventing GUIs to be larger than the game's screen.
+
+    Editor:
+     - Added missing audio options to Default Setup.
+     - Fixed GUI and Room editors sometimes having larger scrollable area than necessary.
+     - Fixed editable area was not resized when GUI size changed.
+     - Fixed TextWindow GUI's elements could be deleted or moved in the editor with key controls with no means to restore them.
+     - Don't modify filesystem permissions in Compiled directory when compiling the game. Editor no longer requires non-standard "takeown.exe" utility.
+     - Fixed Windows Explorer was sometimes locking the game files during compilation.
+     - Fixed rooms not being rebuilt when running game just created from a template.
+     - Fixed translations were not updated or available at all for the test run unless the game was fully rebuilt.
+
+    Engine:
+     - Allowed engine to return integer of "0" value from script functions that are "void" by nature, for compatibility reasons. This may fix running particular old games.
+     - Fixed const-sized char[] arrays in managed structs did not work correctly and could even cause engine to crash.
+     - Fixed some compilers could instigate a crash in the on_event callback if it was called before the first room is loaded.
+     - Prevent game from crashing if there was an attempt to use a non-existant font index.
+     - Fixed crash when calling DisplayTopBar with a title longer than 200 characters.
+     - Fixed DisplayTopBar() was displayed on screen for the time calculated from the length of its title rather than its message text (regression).
+     - Fixed built-in inventory screen could crash the game again (regression).
+     - Made engine fallback to defaults if config contains invalid graphic scaling setting.
+     - Fixed crash in the Software renderer which was occuring if it failed anytime after setting display mode but prior to initializing scaling filter.
+     - Fixed graphic artifacts looking like thin vertical lines around sprites when running OpenGL renderer (aka "texel leaking").
+     - Fixed OpenGL not displaying tinted sprites at all if tinting shader does not work (now will display sprites without tint).
+     - Fixed 8-bit sprites could have broken colours if game is run using Direct3D or OpenGL.
+     - Fixed broken colours during fade-in and fade-out in 16-bit games.
+     - Fixed possible crash occuring when switching in and out the game window while game is being shut down.
+     - Improved a warning message displayed when sound driver was not initialized, and added a hint for players on how to supress it.
+     - Fixed double error message displayed if the game has an unsupported data format.
+
+    Linux:
+     - Fixes Linux game launch script (fixes issues with itch.io client).
+
+    Android:
+     - Long press on "Back" button now calls in-game menu (was displaying exit confirmation).
+       This change was made to counter removal of "Menu" button on many modern devices.
+     - Fixed long press on "Back" and "Menu" buttons not handled correctly on some devices.
+
+    WinSetup:
+     - Always provide at least two standard fullscreen modes for selection, even if graphics driver failed to return a list of supported modes.
+
+    Templates:
+    - Updated 9-verb MI-style to 1.6.3.
+    </releaseNotes>
+    <!-- =============================== -->      
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <dependencies>
+      <dependency id="chocolatey" version="0.9.8.21" />
+    </dependencies>
+
+    <!--<provides>NOT YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
