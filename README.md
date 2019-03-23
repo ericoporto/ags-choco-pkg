@@ -5,7 +5,11 @@ in a windows environment with git and chocolatey installed.
     git clone https://github.com/ericoporto/ags-choco-pkg.git
     cd ags-choco-pkg
     choco pack
-    choco install ags -dv -s
+    choco install ags -s .
+    
+To uninstall, on the same dir, just type
+
+    choco uninstall ags -s .
     
 ## Summary
 How do I create packages? See https://chocolatey.org/docs/create-packages
