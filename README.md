@@ -1,4 +1,13 @@
-﻿## Summary
+﻿## TEST THIS Package
+
+in a windows environment with git and chocolatey installed.
+
+    git clone https://github.com/ericoporto/ags-choco-pkg.git
+    cd ags-choco-pkg
+    choco pack
+    choco install ags -dv -s
+    
+## Summary
 How do I create packages? See https://chocolatey.org/docs/create-packages
 
 If you are submitting packages to the community feed (https://chocolatey.org)
