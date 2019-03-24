@@ -3,7 +3,7 @@
   <metadata>
     <id>ags</id>
     <version>3.4.3.1</version>
-    <packageSourceUrl>https://github.com/adventuregamestudio/ags</packageSourceUrl>
+    <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
     <authors>Chris Jones et al</authors>
