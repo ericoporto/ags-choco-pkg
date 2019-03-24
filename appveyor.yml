@@ -14,5 +14,5 @@ clone_folder: c:\projects\ags-choco-pkg
 
 build_script:
   - choco pack
-  - choco install ags -y -s . 
-  - choco uninstall ags -y -s .
+  - choco install ags -y -s .,chocolatey
+  - choco uninstall ags -y -s .,chocolatey
