@@ -94,6 +94,8 @@
     </releaseNotes>
     <dependencies>
       <dependency id="chocolatey" version="0.9.8.21" />
+      <dependency id="dotnet3.5" version="3.5.20160716"/>
+      <dependency id="dotnet4.0" version="4.0.30319.20141222"/>
     </dependencies>
   </metadata>
   <files>
