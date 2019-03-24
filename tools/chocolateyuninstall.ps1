@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop'; 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   softwareName  = 'Adventure Game Studio 3.4.3' 
