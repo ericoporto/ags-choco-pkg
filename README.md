@@ -1,5 +1,7 @@
 ﻿# Adventure Game Studio Chocolatey package
 
+[![Build status](https://ci.appveyor.com/api/projects/status/2b3lo589gc4imbah/branch/master?svg=true)](https://ci.appveyor.com/project/ericoporto/ags-choco-pkg/branch/master)
+
 ![](cinst_ags.gif)
 
 Adventure Game Studio Chocolatey package, to install you will need Chocolatey 
