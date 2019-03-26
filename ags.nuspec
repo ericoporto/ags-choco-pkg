@@ -9,7 +9,7 @@
     <authors>Chris Jones et al</authors>
     <projectUrl>https://www.adventuregamestudio.co.uk</projectUrl>
     <projectSourceUrl>https://github.com/adventuregamestudio/ags</projectSourceUrl>
-    <iconUrl>https://ericoporto.github.io/ags-choco-pkg/icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ericoporto/ags-choco-pkg@ca1d144d719687803a0facd86599788b7dfcd71f/docs/icon.png</iconUrl>
     <copyright>2019 Chris Jones et al</copyright>
     <licenseUrl>https://raw.githubusercontent.com/adventuregamestudio/ags/master/License.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
