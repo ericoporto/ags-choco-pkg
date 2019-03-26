@@ -24,6 +24,14 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
+    This release is brought to you by:
+
+    - BigMC (updates to Linux scripts)
+    - Crimson Wizard
+    - morganw
+
+
+    General notes
     AGS 3.4.3 is mainly a bug-fixing release, it contains fixes both critical and minor accumulated for the last year. Some of them were part of 3.5.0 development, but since former was taking too long I decided to create an update to 3.4.* branch.
     Version number "3.4.2" is skipped because it was used during early development of 3.5.0.
 
