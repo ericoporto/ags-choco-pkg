@@ -16,7 +16,7 @@ $packageArgs = @{
   checksumType  = 'md5'
 
   validExitCodes= @(0, 3010, 1641)
-  silentArgs   = '/VERYSILENT /MERGETASKS="!desktopicon" /SUPPRESSMSGBOXES /NORESTART /SP-' 
+  silentArgs   = '/VERYSILENT /MERGETASKS="!vcredist" /SUPPRESSMSGBOXES /NORESTART /SP-' 
 }
 
 Install-ChocolateyPackage @packageArgs 
