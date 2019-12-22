@@ -224,7 +224,7 @@
 	Linux:
 	 - Use same FreeType library sources as Windows version, which suppose to fix TTF font glitches.
 	 - Re-enabled threaded audio setting.
-	 - $APPDATADIR$ script paths are now mapped to "$XDG_DATA_HOME/ags-common", making sure it is a
+	 - APPDATADIR script paths are now mapped to "XDG_DATA_HOME/ags-common", making sure it is a
 	   writeable location.
 
 	Windows:
