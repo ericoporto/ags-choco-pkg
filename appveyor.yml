@@ -7,7 +7,7 @@ branches:
 skip_tags: true
 
 # Build worker image (VM template)
-image: Visual Studio 2015
+image: Visual Studio 2019
 
 # clone directory
 clone_folder: c:\projects\ags-choco-pkg
