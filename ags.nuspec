@@ -240,7 +240,6 @@ WinSetup:
     <dependencies>
       <dependency id="chocolatey" version="0.9.8.21" />
       <dependency id="vcredist2015" version="14.0.24215.20170201"/>
-      <dependency id="dotnet3.5" version="3.5.20160716"/>
       <dependency id="dotnet4.5" version="4.5.20120822"/>
     </dependencies>
   </metadata>
