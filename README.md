@@ -41,6 +41,7 @@ To uninstall, on the same dir, just type
 ## Pushing a package to chocolatey
 
 The text below is so I can remember how to do this.
-
+```
 choco apikey --key YOURAPIKEYHERE --source https://push.chocolatey.org/
 choco push ags*.nupkg --source https://push.chocolatey.org/
+```
