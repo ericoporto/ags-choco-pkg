@@ -31,9 +31,16 @@ and chocolatey installed, use the commands below
     cd ags-choco-pkg
     choco pack
     choco install ags -s .,chocolatey
+	
+If you are building on your PC or you want to use a specific version, you can specify a version adding `--version VERSIONNUMBER` to the command above.
     
 To uninstall, on the same dir, just type
 
     choco uninstall ags -s .
  
+## Pushing a package to chocolatey
 
+The text below is so I can remember how to do this.
+
+choco apikey --key YOURAPIKEYHERE --source https://push.chocolatey.org/
+choco push ags*.nupkg --source https://push.chocolatey.org/
