@@ -2,7 +2,7 @@
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url        = 'https://github.com/adventuregamestudio/ags/releases/download/v.3.5.0.23/AGS-3.5.0.23-P1.exe' 
+$url        = 'https://github.com/adventuregamestudio/ags/releases/download/v.3.5.0.24/AGS-3.5.0.24-P2.exe' 
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
