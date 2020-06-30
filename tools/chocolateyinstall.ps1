@@ -12,7 +12,7 @@ $packageArgs = @{
 
   softwareName  = 'Adventure Game Studio 3.5.0' 
   
-  checksum      = 'dba33862d916b13f724cd0f7df1bd999'
+  checksum      = 'e9b1d2081275161a0222186d952d53b6'
   checksumType  = 'md5'
 
   validExitCodes= @(0, 3010, 1641)
