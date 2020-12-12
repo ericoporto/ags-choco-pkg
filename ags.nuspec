@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.0.25</version>
+    <version>3.5.0.26</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,11 +24,12 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-AGS 3.5.0 - Patch 3
-Full release number: 3.5.0.25
+AGS 3.5.0 - Patch 4
+Full release number: 3.5.0.26
 Released: 12th July 2020
 
-Previous stable version: AGS 3.4.3 P1 forum thread
+Released: 16th August 2020
+
 
 This release is brought to you by:
 
@@ -54,6 +55,20 @@ Foreword
 AGS 3.5.0 has brought a number of completely new features and changed few older things. Make sure to read "Upgrade to AGS 3.5" topic (and corresponding topics for previous versions) in the manual to learn more about these changes. If something is not clear or missing, please tell about it and we will add necessary information. (Online version: https://github.com/adventuregamestudio/ags-manual/wiki/UpgradeTo35)
 Note that now we have a new manual project, where the source is in Wiki format that everyone with github account can edit here: https://github.com/adventuregamestudio/ags-manual/wiki . We will appreciate any help in expanding and improving the manual, because AGS documentation had been lacking clear info about many things for too long.
 We may be updating this release with patches to manual too as it is being amended.
+
+
+
+Changes in the Patch 4:
+
+Editor:
+ - Fixed room editor crashing after user changes script name of a character present in opened room.
+ - Fixed modifying any item's script name will make a new name displayed on all opened tabs of same type.
+
+Engine:
+ - Fixed OpenGL was taking screenshots incorrectly on certain systems with different alignment of color components in video memory (OSX, iOS).
+
+WinSetup:
+ - Fixed "Use voice pak" option was reset if no speech.vox found.
 
 
 
@@ -291,6 +306,7 @@ Windows:
 
 WinSetup:
  - Added "Enable threaded audio" checkbox.
+
 
     </releaseNotes>
     <dependencies>
