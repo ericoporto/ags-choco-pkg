@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.0.28</version>
+    <version>3.5.0.29</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -10,7 +10,7 @@
     <projectUrl>https://www.adventuregamestudio.co.uk</projectUrl>
     <projectSourceUrl>https://github.com/adventuregamestudio/ags</projectSourceUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/ericoporto/ags-choco-pkg@ca1d144d719687803a0facd86599788b7dfcd71f/docs/icon.png</iconUrl>
-    <copyright>2020 Chris Jones et al</copyright>
+    <copyright>2021 Chris Jones et al</copyright>
     <licenseUrl>https://raw.githubusercontent.com/adventuregamestudio/ags/master/License.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://adventuregamestudio.github.io/ags-manual/</docsUrl>
@@ -24,9 +24,9 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-AGS 3.5.0 - Patch 6
-Full release number: 3.5.0.28
-Released: 30th December 2020
+AGS 3.5.0 - Patch 7
+Full release number: 3.5.0.29
+Released: 12th January 2021
 
 
 This release is brought to you by:
@@ -53,6 +53,14 @@ AGS 3.5.0 has brought a number of completely new features and changed few older 
 Note that now we have a new manual project, where the source is in Wiki format that everyone with github account can edit here: https://github.com/adventuregamestudio/ags-manual/wiki . We will appreciate any help in expanding and improving the manual, because AGS documentation had been lacking clear info about many things for too long.
 We may be updating this release with patches to manual too as it is being amended.
 
+
+Changes in the Patch 7:
+
+Editor:
+ - Added validation for "Game file name" property to help avoid unsupported filenames.
+
+Engine:
+ - Fixed Right-to-left text was not drawn correctly (regression in 3.5.0).
 
 Changes in the Patch 6:
 
