@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.0.29</version>
+    <version>3.5.0.30</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,9 +24,9 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-AGS 3.5.0 - Patch 7
-Full release number: 3.5.0.29
-Released: 12th January 2021
+AGS 3.5.0 - Patch 8
+Full release number: 3.5.0.30
+Released: 16th February 2021
 
 
 This release is brought to you by:
@@ -53,6 +53,10 @@ AGS 3.5.0 has brought a number of completely new features and changed few older 
 Note that now we have a new manual project, where the source is in Wiki format that everyone with github account can edit here: https://github.com/adventuregamestudio/ags-manual/wiki . We will appreciate any help in expanding and improving the manual, because AGS documentation had been lacking clear info about many things for too long.
 We may be updating this release with patches to manual too as it is being amended.
 
+Changes in the Patch 8:
+
+Common:
+ - Fixed compressed sprite file was not built properly if exceeded 2 GB.
 
 Changes in the Patch 7:
 
