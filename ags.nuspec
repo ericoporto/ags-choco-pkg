@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.0.30</version>
+    <version>3.5.0.31</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,9 +24,9 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-AGS 3.5.0 - Patch 8
-Full release number: 3.5.0.30
-Released: 16th February 2021
+AGS 3.5.0 - Patch 9
+Full release number: 3.5.0.31
+Released: 18th March 2021
 
 
 This release is brought to you by:
@@ -52,6 +52,26 @@ Foreword
 AGS 3.5.0 has brought a number of completely new features and changed few older things. Make sure to read "Upgrade to AGS 3.5" topic (and corresponding topics for previous versions) in the manual to learn more about these changes. If something is not clear or missing, please tell about it and we will add necessary information. (Online version: https://github.com/adventuregamestudio/ags-manual/wiki/UpgradeTo35)
 Note that now we have a new manual project, where the source is in Wiki format that everyone with github account can edit here: https://github.com/adventuregamestudio/ags-manual/wiki . We will appreciate any help in expanding and improving the manual, because AGS documentation had been lacking clear info about many things for too long.
 We may be updating this release with patches to manual too as it is being amended.
+
+Changes in the Patch 9:
+
+Editor:
+ - Fixed importing Characters and GUIs saved by previous versions of the editor.
+ - Added support for startup pane hyperlink color in Color Themes.
+
+Also: updated Dark Theme with fixed category names in General Settings and link colors on Welcome pane. Download here.
+NOTE: The theme files are found in %USERPROFILE%\AppData\Local\AGS\Themes (unfortunately AGS editor still lacks proper way to replace themes of same name afaik).
+
+Engine:
+ - Disabled writing user config upon game exit at least temporarily, because it was causing confusion by unexpectedly overriding default config even if player did not start setup program.
+ - Fixed crash occuring if room object's Graphic is set to sprite with ID greater than 32767.
+ - Fixed button image did not appear updated right after restoring a save.
+ - Fixed legacy PlayMusic() and PlaySound() functions failing if the audio file had uppercase characters in name (regression since 3.4.0).
+
+Linux:
+ - For users of prebuilt binaries fixed potential crash in ogg vorbis library that could occur upon restoring a save made while sounds were playing.
+ - Fixed OpenGL window did not resize properly upon running the game on some systems.
+ - Fixed Alt + Enter combination for toggling window mode was not detected on some systems.
 
 Changes in the Patch 8:
 
