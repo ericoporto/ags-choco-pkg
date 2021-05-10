@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.0.31</version>
+    <version>3.5.0.32</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,9 +24,9 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-AGS 3.5.0 - Patch 9
-Full release number: 3.5.0.31
-Released: 18th March 2021
+AGS 3.5.0 - Patch 10
+Full release number: 3.5.0.32
+Released: 11th May 2021
 
 
 This release is brought to you by:
@@ -52,6 +52,13 @@ Foreword
 AGS 3.5.0 has brought a number of completely new features and changed few older things. Make sure to read "Upgrade to AGS 3.5" topic (and corresponding topics for previous versions) in the manual to learn more about these changes. If something is not clear or missing, please tell about it and we will add necessary information. (Online version: https://github.com/adventuregamestudio/ags-manual/wiki/UpgradeTo35)
 Note that now we have a new manual project, where the source is in Wiki format that everyone with github account can edit here: https://github.com/adventuregamestudio/ags-manual/wiki . We will appreciate any help in expanding and improving the manual, because AGS documentation had been lacking clear info about many things for too long.
 We may be updating this release with patches to manual too as it is being amended.
+
+Changes in the Patch 10:
+
+Engine:
+ 
+- Fixed managed handle error that occured if you would copy an element of any string array returned by Dictionary.GetKeysAsArray(), GetValuesAsArray() and Set.GetItemsAsArray();
+  for example: assign array's element to a local variable.
 
 Changes in the Patch 9:
 
