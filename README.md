@@ -1,6 +1,7 @@
 ﻿# Adventure Game Studio Chocolatey package
 
 [![Build status](https://ci.appveyor.com/api/projects/status/2b3lo589gc4imbah/branch/master?svg=true)](https://ci.appveyor.com/project/ericoporto/ags-choco-pkg/branch/master)
+[![Chocolatey package](https://repology.org/badge/version-for-repo/chocolatey/ags-adventuregamestudio.svg)](https://repology.org/project/ags-adventuregamestudio/versions)
 
 ![](cinst_ags.gif)
 
