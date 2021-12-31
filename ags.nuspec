@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.11</version>
+    <version>3.5.1.12</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,6 +24,10 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
+This is a 3.5.1 Patch 5.
+
+This is a formal re-release of the previous version, only fixed Linux readme which contained incorrect build instructions.
+	
 Released: 21th September 2021
 
 Previous stable version: AGS 3.5.0 P10 forum thread
