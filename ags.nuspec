@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.9</version>
+    <version>3.5.1.10</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,7 +24,7 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 30th July 2021
+Released: 14th August 2021
 
 Previous stable version: AGS 3.5.0 P10 forum thread
 
@@ -48,6 +48,16 @@ Summary
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
 
+
+
+Changes in the Patch 3:
+
+Editor:
+ - Fixed sprite file over 2 GB could not be loaded (regression since the last patch).
+
+Engine:
+ - Further improvement to GUI perfomance: don't redraw GUI when the mouse cursor is hovering over or interacting with controls not leading to an actual visual change.
+ - Fixed ListBox items could become unaccessible if its font or height is changed leading to a disabled scrollbar.
 
 
 Changes in the Patch 2:
@@ -160,6 +170,7 @@ Windows:
 
 WinSetup:
  - Fixed changing fullscreen mode from "use current desktop" to explicit resolution on save.
+
     </releaseNotes>
     <dependencies>
       <dependency id="chocolatey" version="0.9.8.21" />
