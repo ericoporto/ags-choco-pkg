@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.8</version>
+    <version>3.5.1.9</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,7 +24,7 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 22th June 2021
+Released: 30th July 2021
 
 Previous stable version: AGS 3.5.0 P10 forum thread
 
@@ -48,6 +48,15 @@ Summary
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
 
+
+
+Changes in the Patch 2:
+
+Engine:
+ - Fixed speech lipsync getting disabled after loading another game with RunAGSGame().
+ - Fixed MOD/XM clips fail to play (regression).
+ - Fixed certain OGV videos fail to play (regression).
+ - Fixed software renderer was not updating game screen correctly when running a game with legacy "letterboxed" feature (regression).
 
 
 Changes in the Patch 1:
