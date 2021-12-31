@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.7</version>
+    <version>3.5.1.8</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,7 +24,10 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 4th June 2021
+Released: 22th June 2021
+
+Previous stable version: AGS 3.5.0 P10 forum thread
+
 
 This release is brought to you by:
 
@@ -37,9 +40,26 @@ This release is brought to you by:
 - rofl0r
 - Thierry Crozat (bug fixing)
 
+
+
 Summary
 
 3.5.1 is a minor update after 3.5.0, which contains mostly utility additions, fixes and perfomance improvements.
+
+For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
+
+
+
+Changes in the Patch 1:
+
+Editor:
+ - Fixed script compiler sometimes was not specifying actual Dialog number when reporting errors in the dialog scripts.
+
+Engine:
+ - Fixed Game.TranslationFilename always returning empty string (regression).
+ - Fixed GUI controls which were toggled from disabled to enabled state not responding to the mouse clicks until the mouse is moved (regression).
+ - Fixed OpenGL did not apply a Linear filter when "Render sprites in screen resolution" option is off.
+
 
 What is new in 3.5.1
 
@@ -124,8 +144,8 @@ OSX:
  - When looking for game files engine will no longer use hardcoded filename, will search for any compatible pack file instead.
 
 Windows:
- - Windows version of the engine now reads global configuration file. It is looked up in "%USERPROFILE%/Saved Games/Adventure Game Studio/acsetup.cfg"
- - Default log file location is now also in "%USERPROFILE%/Saved Games/Adventure Game Studio".
+ - Windows version of the engine now reads global configuration file. It is looked up in "USERPROFILE/Saved Games/Adventure Game Studio/acsetup.cfg"
+ - Default log file location is now also in "USERPROFILE/Saved Games/Adventure Game Studio".
  - Added "--no-message-box" command line option to hide message boxes when alerts are raised. These messages will be still printed to log (if one is enabled).
  - Added "--console-attach" command line option to try attach to the parent process's console. This is useful if you run game from command line and want to see engine's log in the console.
 
