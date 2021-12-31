@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.12</version>
+    <version>3.5.1.13</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,14 +24,7 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-This is a 3.5.1 Patch 5.
-
-This is a formal re-release of the previous version, only fixed Linux readme which contained incorrect build instructions.
-	
-Released: 21th September 2021
-
-Previous stable version: AGS 3.5.0 P10 forum thread
-
+Released: 28th December 2021
 
 This release is brought to you by:
 
@@ -44,14 +37,42 @@ This release is brought to you by:
 - rofl0r
 - Thierry Crozat (bug fixing)
 
-
-
 Summary
 
 3.5.1 is a minor update after 3.5.0, which contains mostly utility additions, fixes and perfomance improvements.
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
 
+
+
+Changes in the Patch 6:
+
+Editor:
+ - Added line numbers in the dialog script editor.
+ - Fixed Dialog script loosing changes if the pane is closed or redocked.
+ - Fixed controls arrangement on the Dialog pane getting broken when it's redocked.
+
+Engine:
+ - Fixed filepaths in scripts that have backslashes ('\') fail on non-Windows systems.
+   All the (script) File functions will now convert backslashes in filepaths into forward slashes for compatibility.
+ - Fixed engine was still creating standard directories for game saves and data, even if user provided the custom paths for these.
+ - Fixed TextBox control crashing the game if it's empty and player presses Backspace.
+ - Fixed controls on a fully transparent GUI were not interactive (this is an original AGS behavior, which was unintentionally changed in 3.5.0 by mistake).
+
+Compatibility:
+ - When running 3.5.0 games, treat fully transparent GUI as non-interactable.
+   In AGS transparent GUIs may be still interacted with, but 3.5.0 introduced an unintentional (and undocumented) change to this, which was reverted in 3.5.1.
+
+Android:
+ - Support global engine's config file when the game is run from the Launcher: it's located in the AGS games' parent directory, same place where android.cfg is.
+
+WinSetup:
+ - Added "Custom game shared data path" to complement "Custom save path" option.
+
+
+Changes in the Patch 5:
+
+Contained no changes and was a formal re-release with only fixed program build instructions for Linux.
 
 
 Changes in the Patch 4:
