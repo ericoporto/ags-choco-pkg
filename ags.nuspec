@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.10</version>
+    <version>3.5.1.11</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,7 +24,7 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 14th August 2021
+Released: 21th September 2021
 
 Previous stable version: AGS 3.5.0 P10 forum thread
 
@@ -48,6 +48,20 @@ Summary
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
 
+
+
+Changes in the Patch 4:
+
+Editor:
+ - Fixed swapping of inventory item's numeric ID could lead to errors.
+ - Fixed crash when importing pre-3.* games with multiple script modules.
+ - Renamed "Enforce object-based scripting" setting to "Enforce post-2.62 scripting". This is for clarity.
+
+Compiler:
+ - Fixed potential memory corruption when user script reaches max nested if/else blocks.
+
+Engine:
+ - Also tell module name and approximate source line when reporting script import errors for the variables and local functions.
 
 
 Changes in the Patch 3:
