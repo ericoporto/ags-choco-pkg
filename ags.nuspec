@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.14</version>
+    <version>3.5.1.15</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -10,7 +10,7 @@
     <projectUrl>https://www.adventuregamestudio.co.uk</projectUrl>
     <projectSourceUrl>https://github.com/adventuregamestudio/ags</projectSourceUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/ericoporto/ags-choco-pkg@ca1d144d719687803a0facd86599788b7dfcd71f/docs/icon.png</iconUrl>
-    <copyright>2021 Chris Jones et al</copyright>
+    <copyright>2022 Chris Jones et al</copyright>
     <licenseUrl>https://raw.githubusercontent.com/adventuregamestudio/ags/master/License.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://adventuregamestudio.github.io/ags-manual/</docsUrl>
@@ -24,13 +24,14 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 6th January 2022
+Released: 4th February 2022
 
 This release is brought to you by:
 
 - Alan v. Drake
 - Crimson Wizard
 - eri0o
+- fernewelten (fixes)
 - James Duong (implemented "--console-attach" option for Windows)
 - Morgan Willcock
 - Nick Sonneveld
@@ -43,6 +44,19 @@ Summary
 3.5.1 is a minor update after 3.5.0, which contains mostly utility additions, fixes and perfomance improvements.
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
+
+
+Changes in the Patch 8:
+
+Engine:
+- Clearer error messages for Get/SetProperty functions.
+- Fixed PlayFlic() command fails to start the video (regression in 3.5.1).
+- Fixed DrawingSurface.DrawSurface() not applying transparency parameter correctly if the drawn surface has alpha channel.
+- Fixed OVERHOTSPOT is not updated immediately when character's name changes while cursor is above that character.
+
+Templates:
+- In BASS template fixed right click not dropping currently selected item if cursor was hovering over another item.
+
 
 
 Changes in the Patch 7:
