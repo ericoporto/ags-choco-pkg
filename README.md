@@ -20,8 +20,8 @@ To uninstall, type
 AGS will be installed in the Program Files. You can find it by creating a 
 variable like below.
 
-    SET AGS_PATH=%ProgramFiles(X86)%\Adventure Game Studio 3.5.0\
-    IF NOT DEFINED ProgramFiles(x86) SET AGS_PATH=%ProgramFiles%\Adventure Game Studio 3.5.0\
+    SET AGS_PATH=%ProgramFiles(X86)%\Adventure Game Studio 3.5.1\
+    IF NOT DEFINED ProgramFiles(x86) SET AGS_PATH=%ProgramFiles%\Adventure Game Studio 3.5.1\
 
 ## Building this package
 
