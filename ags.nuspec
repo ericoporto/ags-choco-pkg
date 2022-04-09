@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.16</version>
+    <version>3.5.1.17</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,7 +24,7 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 2nd March 2022
+Released: 2nd April 2022
 
 This release is brought to you by:
 
@@ -36,6 +36,7 @@ This release is brought to you by:
 - Morgan Willcock
 - Nick Sonneveld
 - rofl0r
+- Pablo Navarro (fixes)
 - Thierry Crozat (bug fixing)
 - vga256 (bug fixing)
 
@@ -44,6 +45,15 @@ Summary
 3.5.1 is a minor update after 3.5.0, which contains mostly utility additions, fixes and perfomance improvements.
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
+
+Changes in the Patch 10:
+
+Engine:
+ - Fixed crash when visible viewport does not have any linked camera.
+ - Fixed ListBox.FillSaveGameList() may include save slots with negative slot number (e.g. when the save file has "*.-01" extension).
+ - Fixed potential crash after failed RunAGSGame() call.
+ - Fixed search for the game data by GUID when restoring a save belonging to another game;
+   this was implemented in 3.5.1, but appeared to not work correctly.
 
 Changes in the Patch 9:
 
