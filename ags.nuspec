@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.18</version>
+    <version>3.5.1.19</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,7 +24,7 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 6th May 2022
+Released: 23th June 2022
 
 This release is brought to you by:
 
@@ -45,6 +45,12 @@ Summary
 3.5.1 is a minor update after 3.5.0, which contains mostly utility additions, fixes and perfomance improvements.
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
+
+Changes in the Patch 12:
+
+Engine:
+ - Fixed GUI textual controls don't redraw when the game translation changes until player clicks on GUI (regression since previous 3.5.1 updates).
+ - Fixed multitasking mode persisting if the game was switched from windowed to fullscreen mode (even though it's not supposed to work in fullscreen).
 
 Changes in the Patch 11:
 
