@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.19</version>
+    <version>3.5.1.20</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,7 +24,7 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 23th June 2022
+Released: 1st August 2022
 
 This release is brought to you by:
 
@@ -45,6 +45,12 @@ Summary
 3.5.1 is a minor update after 3.5.0, which contains mostly utility additions, fixes and perfomance improvements.
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
+
+Changes in the Patch 13:
+
+Engine:
+ - Fixed room object does not update its texture if it had a dynamic sprite assigned to it, and that sprite was unassigned, modified or recreated with same ID, and then reassigned again, - all within the same game frame.
+ - Fixed normal font renderer is not reinitialized correctly in the engine if a plugin uses IAGSEngine::ReplaceFontRenderer(), passing original renderer's pointer (which it received from the previous ReplaceFontRenderer call).
 
 Changes in the Patch 12:
 
