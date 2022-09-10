@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.20</version>
+    <version>3.5.1.21</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,7 +24,7 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 1st August 2022
+Released: 1st September 2022
 
 This release is brought to you by:
 
@@ -45,6 +45,12 @@ Summary
 3.5.1 is a minor update after 3.5.0, which contains mostly utility additions, fixes and perfomance improvements.
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
+
+Changes in the Patch 14:
+
+Editor:
+ - Do not error when compiling a 256 colors game if Direct3D or OpenGL are selected as a default graphics driver (display a warning instead).
+ - Fixed crash when trying to import pre-2.60 game projects.
 
 Changes in the Patch 13:
 
