@@ -2,7 +2,7 @@
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url        = 'https://github.com/adventuregamestudio/ags/releases/download/v.3.5.1.22/AGS-3.5.1.22-P15.exe' 
+$url        = 'https://github.com/adventuregamestudio/ags/releases/download/v.3.5.1.23/AGS-3.5.1.23-P16.exe' 
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -12,7 +12,7 @@ $packageArgs = @{
 
   softwareName  = 'Adventure Game Studio 3.5.1' 
   
-  checksum      = '6b81d945c48b05be1ef76f4f76e79596'
+  checksum      = '77f0e38833f62b53c7e1c74e8d3cc621'
   checksumType  = 'md5'
 
   validExitCodes= @(0, 3010, 1641)

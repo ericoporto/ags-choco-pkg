@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.22</version>
+    <version>3.5.1.23</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,7 +24,7 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 2nd October 2022
+Released: 2nd December 2022
 
 This release is brought to you by:
 
@@ -45,6 +45,19 @@ Summary
 3.5.1 is a minor update after 3.5.0, which contains mostly utility additions, fixes and perfomance improvements.
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
+
+Changes in the Patch 16:
+
+Editor:
+- Fixed autocomplete crashing the editor if there was an import declared with type and variable having identical names, and user tries to type that variable's name and a dot to access its members.
+- Fixed newly created Views taking free IDs in the middle of the list in random order instead of a straight one (after you previously deleted some Views).
+
+Engine:
+- Added missing "DrawSprite" function for "agsblend" plugin stubs.
+- Fixed loading pre-3.5.0 games on big endian systems.
+- Fixed GUI buttons not displaying the mouse-over image if the interface state was toggled to enabled state while the mouse was over the button.
+
+Updated the manual with certain fixes and corrected examples of using Camera and Viewport structs.
 
 Changes in the Patch 15:
 
