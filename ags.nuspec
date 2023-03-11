@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.25</version>
+    <version>3.5.1.26</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -24,12 +24,13 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 5th February 2022
+Released: 5th March 2023
 
 This release is brought to you by:
 
 - Alan v. Drake
 - Crimson Wizard
+- Donovan Watteau (fix for big-endian systems)
 - eri0o
 - fernewelten (fixes)
 - James Duong (implemented "--console-attach" option for Windows)
@@ -40,11 +41,18 @@ This release is brought to you by:
 - Thierry Crozat (bug fixing)
 - vga256 (bug fixing)
 
+
 Summary
 
 3.5.1 is a minor update after 3.5.0, which contains mostly utility additions, fixes and perfomance improvements.
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
+
+
+Changes in the Patch 19:
+
+Engine:
+ - Fixed System.Volume is not correctly applied after restoring the save. (Regression since at least 3.4.0)
 
 Changes in the Patch 18:
 
