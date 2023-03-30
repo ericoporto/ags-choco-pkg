@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ags</id>
-    <version>3.5.1.26</version>
+    <version>3.5.1.27</version>
     <packageSourceUrl>https://github.com/ericoporto/ags-choco-pkg</packageSourceUrl>
     <owners>ericoporto</owners>
     <title>Adventure Game Studio</title>
@@ -10,7 +10,7 @@
     <projectUrl>https://www.adventuregamestudio.co.uk</projectUrl>
     <projectSourceUrl>https://github.com/adventuregamestudio/ags</projectSourceUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/ericoporto/ags-choco-pkg@ca1d144d719687803a0facd86599788b7dfcd71f/docs/icon.png</iconUrl>
-    <copyright>2022 Chris Jones et al</copyright>
+    <copyright>2023 Chris Jones et al</copyright>
     <licenseUrl>https://raw.githubusercontent.com/adventuregamestudio/ags/master/License.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://adventuregamestudio.github.io/ags-manual/</docsUrl>
@@ -24,7 +24,7 @@
       Create, test and debug your game, all in one place.
     </description>
     <releaseNotes>
-Released: 5th March 2023
+Released: 29th March 2023
 
 This release is brought to you by:
 
@@ -48,6 +48,10 @@ Summary
 
 For the reference, we currently have another major version in works, which is already usable although may be not as stable, and introduces a SDL2-based engine, planned to be released as 3.6.0. If you're interested you may find it here: https://www.adventuregamestudio.co.uk/forums/index.php?topic=58976.0
 
+Changes in the Patch 20:
+
+Engine:
+ - Fixed AudioClip.Play allowing to place clips on a crossfade channel in general case; there's still a backward-compatible case where it's allowed to do so for audio types with reserved channels that exceed the normal channel limit. (Regression since 3.5.1 Patch 11)
 
 Changes in the Patch 19:
 
